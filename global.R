@@ -24,9 +24,6 @@ library(purrr)
 library(tidyr)
 library(leaflet)
 library(countrycode)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(sf)
 library(writexl)
 
 
@@ -198,6 +195,9 @@ projects <- projects |>
 if (file.exists(.centroids_rds)) {
   world_centroids <- readRDS(.centroids_rds)
 } else {
+  library(rnaturalearth)
+  library(rnaturalearthdata)
+  library(sf)
   .world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
   suppressWarnings({
     .cent <- sf::st_centroid(sf::st_geometry(.world))
