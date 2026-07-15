@@ -204,15 +204,15 @@ documentation_ui <- function(id) {
       ),
 
       # --- Citation ---
-      card(
-        class = "mb-4",
-        card_header(tags$h5("How to cite", class = "mb-0")),
-        card_body(
-          p(em("Citation information to be added.")),
-          
-          p("See also our ", tags$a("data insights paper", href = "https://doi.org", target = "_blank"), "in the Earth System Governance journal.")
-        )
-      ),
+      # card(
+      #   class = "mb-4",
+      #   card_header(tags$h5("How to cite", class = "mb-0")),
+      #   card_body(
+      #     p(em("Citation information to be added.")),
+      #     
+      #     p("See also our ", tags$a("data insights paper", href = "https://doi.org", target = "_blank"), "in the Earth System Governance journal.")
+      #   )
+      # ),
       
       # --- Funding ---
       card(
