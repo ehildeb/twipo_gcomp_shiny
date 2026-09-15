@@ -73,11 +73,8 @@ country_map_server <- function(id, data, selected_country = reactive("all")) {
         minZoom = 1, worldCopyJump = TRUE
       )) |>
         leaflet::addProviderTiles(
-          leaflet::providers$CartoDB.PositronNoLabels,
+          leaflet::providers$Esri.WorldGrayCanvas,
           options = leaflet::providerTileOptions(noWrap = FALSE)
-        ) |>
-        leaflet::addProviderTiles(
-          leaflet::providers$CartoDB.PositronOnlyLabels
         ) |>
         leaflet::setView(lng = 10, lat = 25, zoom = 2)
     })
